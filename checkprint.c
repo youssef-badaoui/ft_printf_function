@@ -25,5 +25,3 @@ int checkprint(const char form, va_list ptr)
 		write(count = 1, &form, 1);
 	return (count);
 }
-
-

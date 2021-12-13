@@ -14,12 +14,12 @@ int ft_printf(const char *format, ...)
 
 int main()
 {
-	int i = 79468463;
-//	int j = -3733433;
+//	int i = 79468463;
+	int j = -365659959;
 //	char c = 'k';
 //	char h = 's';
 //	char str[] = "ok!";
 //	char str2[] = "";
-	printf("\n%d",ft_printf("\n %u", i));
-	printf("\n%d" ,printf("\n %u", i));
+	printf("\n%d",ft_printf("\n %u", j));
+	printf("\n%d" ,printf("\n %u", j));
 }
