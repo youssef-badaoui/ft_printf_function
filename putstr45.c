@@ -1,19 +1,39 @@
 
 #include "ft_printf.h"
 
-void putstr45(int n)
+static int	ft_lennum(int num)
 {
-	long 	nb;
-//	int count;
+	int		len;
+	long int	n;
+
+	n = num;
+	len = 0;
+	if (n == 0)
+		return (1);
+	if (n < 0)
+	{
+		len++;
+		n = -n;
+	}
+	while (n != 0)
+	{
+		n = n / 10;
+		len++;
+	}
+	return (len);
+}
+
+int putnbr45(unsigned int n)
+{
+	unsigned int 	nb;
 
 	nb = n;
-	if (nb < 0)
-		nb *= -1;
 	if (nb > 9)
 	{
-		putstr45(nb / 10);
-		putstr45(nb % 10);
+		putnbr45(nb / 10);
+		putnbr45(nb % 10);
 	}
 	else
-		putchar(nb + 48);
+		ft_putchar(nb + 48);
+	return (ft_lennum(n));
 }

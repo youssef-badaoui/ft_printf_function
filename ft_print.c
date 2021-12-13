@@ -3,9 +3,10 @@
 int ft_print(const char *form, va_list ptr)
 {
 	int i;
-	int count ;
+	int count;
 
 	i = 0;
+	count = 0;
 	while(form[i])
 	{
 		if(form[i] == '%')
@@ -18,7 +19,6 @@ int ft_print(const char *form, va_list ptr)
 			write(1, &form[i], 1);
 			count++;
 		}
-
 		i++;
 	}
 	return (count);

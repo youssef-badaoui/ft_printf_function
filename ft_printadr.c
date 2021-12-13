@@ -15,28 +15,37 @@ static int ft_adrlen(unsigned long long adr)
 
 int	ft_printadr(unsigned long long  adr)
 {
-	unsigned long long n, d;
-	int i, j = 0;
-	char hexnum[ft_adrlen(adr)];
+	unsigned long long n;
+	int d;
+	int j;
+	int size;
+	char *hexnum;
  
-    	n = adr;
-	while (n != 0)
-    	{
-        	d = n % 16;
+	size = ft_adrlen(adr);
+	j = 0;
+	hexnum = malloc(size + 1);
+	hexnum[j++] = 0;
+   	n = adr;
+	while (n > 0)
+    {
+       	d = n % 16;
 		if (d < 10)
 			hexnum[j++] = 48 + d;
-	        else
-			hexnum[j++] = 55 + d;
-	        n = n / 16;
-	    }
- 
-	    // display integer into character
-	    for (i = j; i >= 0; i--)
-        	    printf("%c", hexnum[i]);
-	    return 0;
+		else
+			hexnum[j++] = 87 + d;
+	    n = n / 16;
+	}
+	write(1,"0x",2);
 
+    while(hexnum[--j] != 0)
+		write(1, &hexnum[j], 1);
+	free(hexnum);
+  	return (size + 2);
 }
+/*
 int main()
 {
-	ft_printadr(11);
-}
+	int n = 13577737;
+	ft_printadr(n);
+	printf("\n%p", &n);
+}*/

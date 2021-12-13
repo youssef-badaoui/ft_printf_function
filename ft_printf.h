@@ -10,7 +10,7 @@
 
 int ft_print(const char *form, va_list ptr);
 int checkprint(const char form, va_list str);
-void putstr45(int n);
+int  putnbr45(unsigned int  n);
 int puthex(int decimalnum);
 int ft_printadr(unsigned long long adr);
 int ft_putstr(char *s);
