@@ -15,7 +15,7 @@ int ft_printf(const char *format, ...)
 int main()
 {
 //	int i = 79468463;
-	int j = -365659959;
+	int j = -3;
 //	char c = 'k';
 //	char h = 's';
 //	char str[] = "ok!";

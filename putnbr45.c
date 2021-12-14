@@ -25,7 +25,8 @@ static int	ft_lennum(int num)
 
 int putnbr45(unsigned int n)
 {
-	unsigned int 	nb;
+	unsigned int	nb;
+	static int count = 0;
 
 	nb = n;
 	if (nb > 9)
@@ -34,6 +35,8 @@ int putnbr45(unsigned int n)
 		putnbr45(nb % 10);
 	}
 	else
+	{
 		ft_putchar(nb + 48);
-	return (ft_lennum(nb));
+		count ++;
+	}
 }
