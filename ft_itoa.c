@@ -29,6 +29,7 @@ char	*ft_itoa(int n)
 	char		*dest;
 	long int	num;
 //	int			i;
+	char	*temp;
 
 	num = n;
 	len = 0;
@@ -48,5 +49,7 @@ char	*ft_itoa(int n)
 		dest[len] = num % 10 + 48;
 		num /= 10;
 	}
-	return (dest);
+	temp = dest;
+	free(dest);
+	return (temp);
 }

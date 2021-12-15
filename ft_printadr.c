@@ -13,6 +13,12 @@ static int ft_adrlen(unsigned long long adr)
 	return(count);
 }
 
+static int printnil(void)
+{
+	write(1, "0x0", 3);
+	return (3);
+}
+
 int	ft_printadr(unsigned long long  adr)
 {
 	unsigned long long n;
@@ -20,7 +26,10 @@ int	ft_printadr(unsigned long long  adr)
 	int j;
 	int size;
 	char *hexnum;
- 
+
+
+	if(adr == 0)
+		return(printnil());
 	size = ft_adrlen(adr);
 	j = 0;
 	hexnum = malloc(size + 1);

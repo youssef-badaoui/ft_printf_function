@@ -11,15 +11,16 @@ int ft_printf(const char *format, ...)
 	va_end(ptr);
 	return (count);
 }
-
+/*
 int main()
 {
-//	int i = 79468463;
-	int j = -3;
+//int i = 79468463;
+	//int j = -32352532;
 //	char c = 'k';
 //	char h = 's';
 //	char str[] = "ok!";
 //	char str2[] = "";
-	printf("\n%d",ft_printf("\n %u", j));
-	printf("\n%d" ,printf("\n %u", j));
+	printf("\n%d",ft_printf("\n%x", 0));
+	printf("\n%d" ,printf("\n%x", 0));
 }
+*/
