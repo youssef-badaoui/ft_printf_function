@@ -13,7 +13,7 @@ int ft_printf(const char *format, ...);
 int ft_print(const char *form, va_list ptr);
 int checkprint(const char form, va_list str);
 int  putnbr45(unsigned int  n);
-int puthex(long int  nb);
+int puthex(unsigned int  nb);
 int ft_printadr(unsigned long long adr);
 int ft_putstr(char *s);
 int puthexup(unsigned int n);

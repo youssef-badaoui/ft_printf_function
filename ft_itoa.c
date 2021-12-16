@@ -1,9 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ybadaoui <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/12/15 04:05:25 by ybadaoui          #+#    #+#             */
+/*   Updated: 2021/12/15 04:07:14 by ybadaoui         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "ft_printf.h"
 
 static int	ft_lennum(int num)
 {
-	int		len;
+	int			len;
 	long int	n;
 
 	n = num;
@@ -28,12 +39,10 @@ char	*ft_itoa(int n)
 	int			len;
 	char		*dest;
 	long int	num;
-//	int			i;
-	char	*temp;
+	char		*temp;
 
 	num = n;
 	len = 0;
-//	i = 0;
 	len = ft_lennum(num);
 	dest = (char *)malloc((len + 1) * sizeof(char));
 	if (!dest)
